@@ -27,6 +27,7 @@ demo.py
 flask --app demo run
 
 ## 运行项目
+flask --app hello run --host=0.0.0.0 --port=5000
 
 ### 运行激活  
 .venv\Scripts\activate
@@ -41,4 +42,4 @@ flask app run
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python app.py
+flask --app hello run
