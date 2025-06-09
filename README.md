@@ -33,5 +33,12 @@ flask --app demo run
 
 ### 启动项目
 flask --app hello run
+flask --app demo run
+flask app run
 
+# Linux
 
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
