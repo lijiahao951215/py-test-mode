@@ -9,8 +9,11 @@ python --version
 
 ## Flask 框架安装
 pip install flask
-### 其他安装
+### 其他安装（产品关联性计算）
 pip install sentence-transformers
+
+### 生成依赖
+pip freeze > requirements.txt
 
 ### 追加测试环境
 python -m venv .venv
@@ -27,3 +30,5 @@ flask --app demo run
 
 ### 启动项目
 flask --app hello run
+
+
