@@ -12,7 +12,8 @@ def show_user_profile(username):
     return f'User {username}'
 
 # ✅ 加入 SBERT 模型和产品数据
-model = SentenceTransformer('all-MiniLM-L6-v2')
+# model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer('/www/wwwroot/py-test-mode/models/all-MiniLM-L6-v2')
 
 # ✅ 新增的 /similarity 路由
 @app.route("/similarity", methods=["POST"])
