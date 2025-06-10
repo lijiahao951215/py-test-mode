@@ -56,6 +56,13 @@ source .venv/bin/activate
 pip install gunicorn
 gunicorn --workers 3 --bind unix:demo.sock -m 007 demo:app
 
+ubuntu@VM-20-2-ubuntu:~$ ls -l /www/wwwroot/py-test-mode/demo.sock
+srwxrwx--- 1 ubuntu ubuntu 0 Jun 10 09:57 /www/wwwroot/py-test-mode/demo.sock
+ubuntu@VM-20-2-ubuntu:~$ sudo chown ubuntu:www /www/wwwroot/py-test-mode/demo.sock
+sudo chmod g+x /www/wwwroot/py-test-mode/demo.sock
+ubuntu@VM-20-2-ubuntu:~$ ls -l /www/wwwroot/py-test-mode/demo.sock
+srwxrwx--- 1 ubuntu www 0 Jun 10 09:57 /www/wwwroot/py-test-mode/demo.sock
+
 ### supervisor
 [program:flask_app]
 directory=/www/wwwroot/py-test-mode/
