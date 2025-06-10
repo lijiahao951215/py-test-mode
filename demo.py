@@ -56,6 +56,28 @@ def similarity():
         return jsonify({"error": str(e)}), 500
 
 
+complement_map = {
+    "Laptop": ["Mouse", "Keyboard", "Monitor", "USB Hub"],
+    "Shoe": ["Socks", "Shoe Polish", "Insole"],
+    "Short sleeve": ["Shorts", "Cap", "Sunglasses"]
+}
+
+# ✅ 新增的 /complementary 路由 互补产品 需要自己加映射
+@app.route("/complementary", methods=["POST"])
+def complementary():
+    data = request.get_json()
+    query = data.get("product_name", "").strip()
+
+    if not query:
+        return jsonify({"error": "Missing 'product_name'"}), 400
+
+    related = complement_map.get(query, [])
+    return jsonify({
+        "query": query,
+        "complementary_products": related
+    })
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
