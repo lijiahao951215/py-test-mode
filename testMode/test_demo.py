@@ -38,6 +38,7 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 #使用公司提供的open ai来代替
 model = ChatOpenAI(
     model='gemini-2.0-flash',
+    # model='qwen-max',
     temperature=0,
     api_key='sk-rCV1f1Z5sfNPISzoA1Fd7c2d35C748729eB7BdE071D1C035',
     base_url='https://llm-hub.parcelpanel.com/v1'
@@ -87,5 +88,5 @@ chain = (RunnablePassthrough.assign(query=create_sql).
          )
 
 
-rep = chain.invoke(input={'question': '请问：表 product_records_test 中，有哪些产品与 Nova Top - Olive 互补，只需要产品名列表？'})
+rep = chain.invoke(input={'question': '请问：表 product_records_test 中，有哪些产品与 Nova Top - Olive 互补，只需要产品名列表'})
 print(rep)
