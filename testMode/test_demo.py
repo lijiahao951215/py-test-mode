@@ -88,5 +88,5 @@ chain = (RunnablePassthrough.assign(query=create_sql).
          )
 
 
-rep = chain.invoke(input={'question': '请问：表 product_records_test 中，有哪些产品与 Nova Top - Olive 互补，只需要产品名列表'})
+rep = chain.invoke(input={'question': '已知 hs_code_list 为 hs code 列表，根据 hs_code_describe 描述关键词，对应描述中有互补的描述，获取 hs_code 对应的互补集合，互补是指产品直接的关系'})
 print(rep)

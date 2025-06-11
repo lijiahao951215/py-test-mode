@@ -57,9 +57,19 @@ def similarity():
 
 
 complement_map = {
-    "Laptop": ["Mouse", "Keyboard", "Monitor", "USB Hub"],
-    "Shoe": ["Socks", "Shoe Polish", "Insole"],
-    "Short sleeve": ["Shorts", "Cap", "Sunglasses"]
+    "Laptop": ["Mouse", "Keyboard", "Monitor", "USB Hub", "Laptop Bag", "External Hard Drive", "Laptop Stand"],
+    "Smartphone": ["Phone Case", "Screen Protector", "Charger", "Headphones", "Power Bank", "Memory Card"],
+    "Shoe": ["Socks", "Shoe Polish", "Insole", "Waterproofing Spray", "Shoelaces"],
+    "Short sleeve": ["Shorts", "Cap", "Sunglasses", "Flip Flops", "Beach Towel"],
+    "Coffee Maker": ["Coffee Beans", "Coffee Filters", "Milk Frother", "Thermos", "Coffee Grinder"],
+    "Bicycle": ["Helmet", "Bike Lock", "Pump", "Biking Shorts", "Water Bottle"],
+    "Gaming Console": ["Controller", "Game Pad", "HDMI Cable", "Headset", "Gaming Chair"],
+    "Camera": ["Memory Card", "Tripod", "Lens", "Camera Bag", "External Flash"],
+    "E-Reader": ["Case", "Reading Light", "Charging Cable", "Screen Protector"],
+    "Fitness Tracker": ["Replacement Bands", "Charging Dock", "Protective Case"],
+    "Drone": ["Extra Batteries", "Propeller Guards", "Carrying Case", "MicroSD Card"],
+    "Printer": ["Ink Cartridges", "Paper", "Scanner", "Stapler"],
+    "Guitar": ["Pick", "Capo", "Tuner", "Strings", "Guitar Strap"]
 }
 
 # ✅ 新增的 /complementary 路由 互补产品 需要自己加映射
